@@ -19,6 +19,7 @@
         <th>Behavior</th>
         <th>Conservation Level</th>
         <th>Backyard Tips</th>
+        <th>&nbsp;</th>
       </tr>
 
 
@@ -40,6 +41,7 @@ $bird_array = $parser->parse();
         <td><?= $bird->behavior; ?></td>
         <td><?php echo $bird->conservation(); ?></td>
         <td><?= $bird->backyard_tips; ?></td>
+        <td><a href="detail.php?id=<?php echo $bird->common_name; ?>">View</a></td>
       </tr>
 <?php } ?>
     </table>
@@ -47,11 +49,12 @@ $bird_array = $parser->parse();
     <?php
 
       // This code is from the PDO tutorial from asgn05
-
+      
       $stmt = $database->query("SELECT * FROM birds");
       while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         echo 'Name: ' . $row['common_name'] . '<br>';
       }
+
     ?>
   </div>
 
