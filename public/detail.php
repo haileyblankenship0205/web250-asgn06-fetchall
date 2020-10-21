@@ -4,19 +4,19 @@
 
   // Get requested ID
 
-  $id = $_GET['common_name'] ?? false;
+  // $id = $_GET['common_name'] ?? false;
 
-  if(!$id) {
-    redirect_to('birds.php');
-  }
+  // if(!$id) {
+  //   redirect_to('birds.php');
+  // }
 
-  // Find bicycle using ID
+  // Find bird using ID
 
-  $bird = Bird::find_by_id($id);
+  // $bird = Bird::find_by_id($id);
 
 ?>
 
-<?php $page_title = 'Detail: ' . $bird->name(); ?>
+<?php $page_title = 'Detail'  ?>
 <?php include(SHARED_PATH . '/public_header.php'); ?>
 
 <div id="main">
