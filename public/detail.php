@@ -35,7 +35,7 @@
       </dl>
       <dl>
         <dt>Conservation Level</dt>
-        <dd><?php echo h($bird->conservation()) ;?> </dd>
+        <dd><?php echo h($bird->conservation()) ;?> </dd> 
       </dl>
       <dl>
         <dt>Backyard Tips</dt>

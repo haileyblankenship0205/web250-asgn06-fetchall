@@ -1,4 +1,4 @@
-<?php require_once('../private/initialize.php'); ?>
+$bir<?php require_once('../private/initialize.php'); ?>
 
 <?php $page_title = 'WNC Birds'; ?>
 <?php include(SHARED_PATH . '/public_header.php'); ?>
