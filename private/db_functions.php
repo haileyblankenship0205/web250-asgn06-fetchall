@@ -9,5 +9,11 @@ function db_connect() {
     catch(Exception $e) {
         echo $e->getMessage();
     }
+
+    function db_disconnect($connection) {
+        if(isset($connection)) {
+            $connection->close();
+        }
+    }
     
 }

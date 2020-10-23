@@ -3,20 +3,15 @@
 <?php
 
   // Get requested ID
-
-  // $id = $_GET['common_name'] ?? false;
-
-  // if(!$id) {
-  //   redirect_to('birds.php');
-  // }
-
-  // Find bird using ID
-
-  // $bird = Bird::find_by_id($id);
-
+  $id = $_GET['id'] ?? false;
+  if(!$id) {
+    redirect_to('bird.php');
+  }
+  
+  $bird = Bird::find_by_id($id);
 ?>
 
-<?php $page_title = 'Detail'  ?>
+<?php $page_title = 'Detail'; ?>
 <?php include(SHARED_PATH . '/public_header.php'); ?>
 
 <div id="main">
@@ -40,12 +35,13 @@
       </dl>
       <dl>
         <dt>Conservation Level</dt>
-        <dd><?php echo h($bird->conservation()); ?></dd>
+        <dd><?php echo h($bird->conservation()) ;?> </dd>
       </dl>
       <dl>
         <dt>Backyard Tips</dt>
         <dd><?php echo h($bird->backyard_tips); ?></dd>
       </dl>
+     
     </div>
 
   </div>
